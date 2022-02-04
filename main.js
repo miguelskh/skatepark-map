@@ -15,13 +15,6 @@ var map = L.map('map').setView([50.984, 44.490], 6);
         return resultUrl;
       }
 
-const markerIcon = L.icon({
-  iconUrl: `skateboard.png`,
-  iconSize: [31, 46], // size of the icon
-  iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
-  popupAnchor: [0, -45] // point from which the popup should open relative to the iconAnchor
-});
-
       $("#query-button").click(function () {
         var queryTextfieldValue = $("#query-textfield").val();
         var overpassApiUrl = buildOverpassApiUrl(map, queryTextfieldValue);
